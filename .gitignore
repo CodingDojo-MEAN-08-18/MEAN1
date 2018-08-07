@@ -1,0 +1,10 @@
+.DS_Store
+
+*.log
+*.map
+*.d.ts
+
+typings/
+node_modules/
+coverage/
+!spec/**
