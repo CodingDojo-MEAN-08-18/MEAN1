@@ -1,7 +1,6 @@
-var myStr
-var index;
+var myStr = 'some string content';
 
-myStr = 'some string content';
+
 console.log(myStr);
 
 myStr = 234234;
@@ -17,12 +16,10 @@ if (array.push(123) > 10) {
 
 // console.log(array[0]);
 
-for (let index = 0; index < array.length; index++) {
-  // console.log('index ', array[index]);
-}
+// for (var index = 0; index < array.length; index++) {
+//   console.log('index ', array[index]);
+// }
 
-
-// console.log('after', index);
 
 // for (var thing in array) {
 //   console.log('thing' + thing);
@@ -60,47 +57,13 @@ var person = {
 // for (var key in person) {
 //   console.log('key', person[key], key);
 // }
-// console.log('returned content', sayHello('Bob', true, 10));
 
 function sayHello(name, ...rest) {
-  console.log(person);
+  console.log(rest);
   console.log('hello ' + name);
 
   return name;
 }
 
 
-function counter(options) {
-  var count = 0;
-
-  function childScope() {
-    console.log('child called');
-    return ++count;
-  }
-
-  return childScope;
-}
-
-counter = counter();
-
-console.log(counter());
-console.log(counter());
-console.log(counter());
-
-// console.log(counter())
-// => 1
-// console.log(counter())
-// => 2
-// console.log(counter())
-// => 3
-// console.log(counter())
-// => 4
-
-
-function anotherFunc(func) {
-  if (typeof func === 'function') {
-    console.log('inside another', func());
-  }
-}
-
-anotherFunc(counter);
+console.log('returned content', sayHello('Bob', true, 10));
